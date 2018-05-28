@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="a8a0bc0d-2a4f-463d-8f6d-b4e5da7ec685"
-    Publisher="CN=b897fbb4-017a-4ee8-8f29-2ff3a16d4e43"
+    Name="abf2c6ba-3fbb-4d9f-9506-5e325bb7d1ca"
+    Publisher="CN=b91bacd0-28ec-4554-b302-7791e1746a8e"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ChordProgression.UWP</DisplayName>
-    <PublisherDisplayName>b897fbb4-017a-4ee8-8f29-2ff3a16d4e43</PublisherDisplayName>
+    <PublisherDisplayName>b91bacd0-28ec-4554-b302-7791e1746a8e</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

@@ -50,5 +50,9 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>ChordProgression</string>
+	<key>UIAppFonts</key>key>
+	<array>
+		<string>MuseJazz.ttf</string>
+	</array>
 </dict>
 </plist>

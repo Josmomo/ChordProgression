@@ -3,9 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ChordProgression"
              x:Class="ChordProgression.MainPage">
+    <ContentPage.BackgroundColor>
+        <Color>
+            #33b5e5
+        </Color>
+    </ContentPage.BackgroundColor>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Label x:Name="LabelLogo"
+                Text="Chord&#x0a;Prog"
+                TextColor="White"
+                FontSize="Large"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                RelativeLayout.WidthConstraint="{ConstraintExpression   Type=RelativeToParent,
+                                                                        Property=Width,
+                                                                        Factor=1.0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression  Type=RelativeToParent,
+                                                                        Property=Height,
+                                                                        Factor=0.3}"/>
+            <StackLayout x:Name="Test"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                RelativeLayout.WidthConstraint="{ConstraintExpression   Type=RelativeToParent,
+                                                                        Property=Width,
+                                                                        Factor=1.0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression  Type=RelativeToParent,
+                                                                        Property=Height,
+                                                                        Factor=0.7}"
+                RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView,
+                                                                    ElementName=LabelLogo,
+                                                                    Property=Height,
+                                                                    Factor=1.0}">
+                <Button Text="Button"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    BorderColor="White"
+                    BorderWidth="2"
+                    BorderRadius="8"
+                    Clicked="Clicked_Button"/>
+            </StackLayout>
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+        </RelativeLayout>
+    </ContentPage.Content>
 </ContentPage>

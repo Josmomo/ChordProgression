@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{FF6D21BA-C227-45EF-9FB3-619FDA9FC1F7}</ProjectGuid>
+    <ProjectGuid>{4FD50900-DD5C-4052-8136-3FFF0FC37DBB}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ChordProgression.UWP</RootNamespace>
@@ -101,6 +101,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\MuseJazz.ttf" />
     <None Include="ChordProgression.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -149,11 +150,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1"/>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChordProgression\ChordProgression.csproj">
-      <Project>{10189A55-D634-42B9-B595-39BCFAEAEA72}</Project>
+      <Project>{7F4BD33C-B8B7-44CD-AFD8-4DEF80CB393A}</Project>
       <Name>ChordProgression</Name>
     </ProjectReference>
   </ItemGroup>

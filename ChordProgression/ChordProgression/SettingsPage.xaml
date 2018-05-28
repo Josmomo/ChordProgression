@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChordProgression.SettingsPage">
+    <ContentPage.BackgroundColor>
+        <Color>
+            #33b5e5
+        </Color>
+    </ContentPage.BackgroundColor>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ScrollView x:Name="ScrollView"
+                Orientation="Vertical"
+                RelativeLayout.WidthConstraint="{ConstraintExpression   Type=RelativeToParent,
+                                                                        Property=Width,
+                                                                        Factor=1.0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression  Type=RelativeToParent,
+                                                                        Property=Height,
+                                                                        Factor=0.9}">
+                <StackLayout Orientation="Vertical"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                        <Picker x:Name="PickerKeyChordBase"
+                            Title="Chord Base"
+                            HorizontalOptions="FillAndExpand">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>C</x:String>
+                                    <x:String>C#/Db</x:String>
+                                    <x:String>D</x:String>
+                                    <x:String>D#/Eb</x:String>
+                                    <x:String>E</x:String>
+                                    <x:String>F</x:String>
+                                    <x:String>F#/Gb</x:String>
+                                    <x:String>G</x:String>
+                                    <x:String>G#/Ab</x:String>
+                                    <x:String>A</x:String>
+                                    <x:String>A#/Bb</x:String>
+                                    <x:String>B</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Picker x:Name="PickerKeyChordType"
+                            Title="Chord Type"
+                            HorizontalOptions="FillAndExpand">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Major</x:String>
+                                    <x:String>Minor</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Picker x:Name="PickerTimeSignature"
+                            Title="Time Signature"
+                            HorizontalOptions="FillAndExpand">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>2/4</x:String>
+                                    <x:String>3/4</x:String>
+                                    <x:String>4/4</x:String>
+                                    <x:String>5/4</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                        <Button Text="Simple"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            BorderColor="White"
+                            BorderWidth="2"
+                            BorderRadius="8"/>
+                        <Button Text="All"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            BorderColor="White"
+                            BorderWidth="2"
+                            BorderRadius="8"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                        <TableView Intent="Settings">
+                            <TableRoot>
+                                <TableSection>
+                                    <SwitchCell Text="Major" On="True"/>
+                                    <SwitchCell Text="Minor" On="True"/>
+                                    <SwitchCell Text="Minor6"/>
+                                    <SwitchCell Text="Minor7"/>
+                                    <SwitchCell Text="Minor7b5"/>
+                                    <SwitchCell Text="Minor9"/>
+                                    <SwitchCell Text="Maj7"/>
+                                    <SwitchCell Text="Maj9"/>
+                                    <SwitchCell Text="Dim7"/>
+                                    <SwitchCell Text="Dim/b3"/>
+                                    <SwitchCell Text="Sus"/>
+                                </TableSection>
+                            </TableRoot>
+                        </TableView>
+                        <TableView Intent="Settings">
+                            <TableRoot>
+                                <TableSection>
+                                    <SwitchCell Text="/1"/>
+                                    <SwitchCell Text="2"/>
+                                    <SwitchCell Text="/2"/>
+                                    <SwitchCell Text="/3"/>
+                                    <SwitchCell Text="/5"/>
+                                    <SwitchCell Text="6"/>
+                                    <SwitchCell Text="7" On="True"/>
+                                    <SwitchCell Text="9"/>
+                                    <SwitchCell Text="b9"/>
+                                    <SwitchCell Text="11"/>
+                                    <SwitchCell Text="13"/>
+                                </TableSection>
+                            </TableRoot>
+                        </TableView>
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+            <Button Text="Start"
+                RelativeLayout.WidthConstraint="{ConstraintExpression   Type=RelativeToParent,
+                                                                        Property=Width,
+                                                                        Factor=1.0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression  Type=RelativeToParent,
+                                                                        Property=Height,
+                                                                        Factor=0.1}"
+                RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView,
+                                                                    ElementName=ScrollView,
+                                                                    Property=Height,
+                                                                    Factor=1.0}"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="White"
+                BorderWidth="2"
+                BorderRadius="8"
+                Clicked="Clicked_Button"/>
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

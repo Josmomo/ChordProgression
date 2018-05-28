@@ -13,7 +13,7 @@ namespace ChordProgression
 		{
 			InitializeComponent();
 
-			MainPage = new ChordProgression.MainPage();
+			MainPage = new NavigationPage(new ChordProgression.SplashScreen());
 		}
 
 		protected override void OnStart ()
@@ -30,5 +30,5 @@ namespace ChordProgression
 		{
 			// Handle when your app resumes
 		}
-	}
+    }
 }

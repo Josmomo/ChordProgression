@@ -4,7 +4,13 @@
              x:Class="ChordProgression.App">
 	<Application.Resources>
 
-		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="MuseJazzFont">
+                <On Platform="Android" Value="MuseJazz.ttf#MuseJazz" />
+                <On Platform="UWP" Value="/Assets/MuseJazz.ttf#MuseJazz" />
+                <On Platform="iOS" Value="MuseJazz" />
+            </OnPlatform>
+        </ResourceDictionary>
 
 	</Application.Resources>
 </Application>
